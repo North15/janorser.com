@@ -1,30 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>janorser - index</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-        <link rel="stylesheet" href="index.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tech Blog</title>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="container main">
-            <div>
-                <h5>Jacob North</h5>
-            </div>
-            <div>
-                <ul class="addSpace">
-                    <li>
-                        Lead Developer at Cadet Portfolio, an EdTech Startup
-                        digitizing the curriculum for Army JROTC.
-                    </li>
-                    <li>
-                        Passionate about creating productive teams and proficent
-                        code.
-                    </li>
+        <div class="container">
+            <nav class="sidebar">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
-            </div>
+            </nav>
+            <main class="content">
+                <header>
+                    <h1>Tech Blog</h1>
+                </header>
+                <div class="grid-container" id="articles">
+                    <!-- Article cards will be dynamically inserted here -->
+                </div>
+                <div id="pagination">
+                    <button id="prevPage" disabled>Previous</button>
+                    <button id="nextPage">Next</button>
+                </div>
+            </main>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
