@@ -4,26 +4,46 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Article</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
         <link rel="stylesheet" href="styles.css" />
     </head>
-    <body>
-        <div class="container">
-            <nav class="sidebar">
-                <h2>Navigation</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </nav>
-            <main class="content">
-                <header>
-                    <h1>Tech Blog</h1>
-                </header>
-                <div id="articleContent">
-                    <!-- Full article content will be dynamically inserted here -->
-                </div>
-            </main>
+    <body class="bg-dark text-light">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+                    <div class="sidebar-sticky">
+                        <h5 class="sidebar-heading">Navigation</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link text-light"
+                                    href="resume.html"
+                                    >Resume</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    <header>
+                        <h1>Tech Blog</h1>
+                    </header>
+                    <div id="articleContent">
+                        <!-- Full article content will be dynamically inserted here -->
+                    </div>
+                </main>
+            </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

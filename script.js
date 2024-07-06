@@ -10,16 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const renderArticles = () => {
-        const gridContainer = document.getElementById("articles");
-        gridContainer.innerHTML = "";
+        const articlesContainer = document.getElementById("articles");
+        articlesContainer.innerHTML = "";
         const start = (currentPage - 1) * articlesPerPage;
         const end = start + articlesPerPage;
         const currentArticles = articles.slice(start, end);
 
         currentArticles.forEach((article) => {
             const card = document.createElement("div");
-            card.className = "card";
-            card.innerHTML = `<h3>${article.title}</h3><p>${article.description}</p>`;
+            card.className = "col-md-3 mb-4";
+            card.innerHTML = `
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">${article.title}</h5>
+                        <p class="card-text">${article.description}</p>
+                    </div>
+                </div>`;
             card.addEventListener("click", () => {
                 localStorage.setItem(
                     "selectedArticle",
@@ -27,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
                 window.location.href = "article.html";
             });
-            gridContainer.appendChild(card);
+            articlesContainer.appendChild(card);
         });
 
         document.getElementById("prevPage").disabled = currentPage === 1;
